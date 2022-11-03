@@ -241,12 +241,11 @@
 			.light {
 				background: #ece8e1;
 				box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
-				text-shadow: none;
-				filter: blur(0);
 			}
 
-			.light-hover {
-				background: blue;
+			.agent-bg:hover .light-hover {
+				background: #ece8e180;
+				text-shadow: none;
 			}
 
 			.agent-img-shadow {
@@ -698,6 +697,9 @@
 				document
 					.querySelectorAll(".agent-img")
 					.forEach((el) => el.classList.toggle("agent-img-shadow"));
+				document
+					.querySelectorAll(".agent-desc")
+					.forEach((el) => el.classList.toggle("light-hover"));
 			};
 
 			let themeBtn = document.querySelector(".theme");
