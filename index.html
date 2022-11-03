@@ -118,7 +118,7 @@
 				text-align: center;
 			}
 
-			.agent-container img {
+			.agent-img {
 				width: 350px;
 				transform: translateY(-30px);
 				margin: 0 auto;
@@ -231,6 +231,28 @@
 				margin: 0 240px;
 			}
 
+			/* LIGHT THEME */
+
+			.light-background {
+				color: #292929;
+				background: #faf8f8;
+			}
+
+			.light {
+				background: #ece8e1;
+				box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
+				text-shadow: none;
+				filter: blur(0);
+			}
+
+			.light-hover {
+				background: blue;
+			}
+
+			.agent-img-shadow {
+				filter: drop-shadow(8px 0px 10px rgba(0, 0, 0, 0.25));
+			}
+
 			@media only screen and (max-width: 1200px) {
 				.agent-container {
 					margin: 0 30px;
@@ -269,7 +291,7 @@
 					justify-content: center;
 				}
 				.agent-bg:hover .agent-desc {
-					padding: 8px;
+					padding: 20px 2px;
 				}
 				.theme,
 				.question {
@@ -664,5 +686,22 @@
 				>
 			</p>
 		</div>
+		<script>
+			let themeChange = () => {
+				document.querySelector(".theme").classList.toggle("light");
+				document.querySelector("nav").classList.toggle("light");
+				document.querySelector(".question").classList.toggle("light");
+				document.querySelector("body").classList.toggle("light-background");
+				document
+					.querySelectorAll(".agent-bg")
+					.forEach((el) => el.classList.toggle("light"));
+				document
+					.querySelectorAll(".agent-img")
+					.forEach((el) => el.classList.toggle("agent-img-shadow"));
+			};
+
+			let themeBtn = document.querySelector(".theme");
+			themeBtn.addEventListener("click", themeChange);
+		</script>
 	</body>
 </html>
