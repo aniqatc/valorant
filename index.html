@@ -125,9 +125,41 @@
 				transition: all 150ms ease-in-out;
 			}
 
+			.map-img {
+				border-radius: 10px;
+				margin: 5px 10px;
+				border: 2px solid #3738397b;
+				max-width: 100%;
+				width: 150px;
+				transition: all 150ms ease-out;
+			}
+
+			.map-container {
+				display: flex;
+				margin: 0 10px 20px 10px;
+				justify-content: center;
+			}
+
+			.map-bg {
+				position: relative;
+			}
+
+			.map-desc {
+				position: absolute;
+				top: 45%;
+				left: 12%;
+				font-family: "Barlow Semi Condensed", sans-serif;
+				font-size: 18px;
+			}
+
+			.map-img:hover {
+				transform: scale(1.2);
+			}
+
 			.agent-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+				grid-template-rows: auto;
 			}
 
 			.agent-bg {
@@ -251,9 +283,17 @@
 				filter: drop-shadow(8px 0px 10px rgba(0, 0, 0, 0.25));
 			}
 
+			.light-desc {
+				color: #faf8f8;
+			}
+
 			@media only screen and (max-width: 1200px) {
 				.agent-container {
 					margin: 0 30px;
+				}
+
+				.map-container {
+					flex-wrap: wrap;
 				}
 
 				header {
@@ -320,7 +360,71 @@
 			<button class="question">❓</button>
 			<button class="theme">💡</button>
 		</header>
-
+		<section class="map-container">
+			<div class="map-bg">
+				<img
+					src="/projects/basics-addon/local/valorant/assets/images/maps/pearl.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Pearl</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/ascent.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Ascent</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/bind.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Bind</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/fracture.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Fracture</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/haven.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Haven</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/icebox.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Icebox</b>
+				</p>
+			</div>
+			<div class="map-bg">
+				<img
+					src="https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/maps/breeze.png"
+					class="map-img"
+				/>
+				<p class="map-desc">
+					<b>Breeze</b>
+				</p>
+			</div>
+		</section>
 		<section class="agent-cta">
 			<h2>AGENTS</h2>
 			<button class="find-agent">Find Your Match</button>
@@ -690,6 +794,9 @@
 				document.querySelector("nav").classList.toggle("light-card");
 				document.querySelector(".question").classList.toggle("light-card");
 				document.querySelector("body").classList.toggle("light");
+				document
+					.querySelectorAll(".map-desc")
+					.forEach((el) => el.classList.toggle("light-desc"));
 				document
 					.querySelectorAll(".agent-bg")
 					.forEach((el) => el.classList.toggle("light-card"));
