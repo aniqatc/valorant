@@ -59,6 +59,7 @@
 				font-family: "Nunito", sans-serif;
 				font-weight: 800;
 				font-size: 15px;
+				cursor: pointer;
 			}
 
 			p {
@@ -129,8 +130,7 @@
 				border-radius: 10px;
 				margin: 5px 10px;
 				border: 2px solid #3738397b;
-				max-width: 100%;
-				width: 150px;
+				width: 180px;
 				transition: all 150ms ease-out;
 			}
 
@@ -138,6 +138,7 @@
 				display: flex;
 				margin: 0 10px 20px 10px;
 				justify-content: center;
+				flex-wrap: wrap;
 			}
 
 			.map-bg {
@@ -292,10 +293,6 @@
 					margin: 0 30px;
 				}
 
-				.map-container {
-					flex-wrap: wrap;
-				}
-
 				header {
 					margin: 0 20px;
 				}
@@ -427,7 +424,7 @@
 		</section>
 		<section class="agent-cta">
 			<h2>AGENTS</h2>
-			<button class="find-agent">Find Your Match</button>
+			<button class="find-agent" id="hero-match">Find Your Match</button>
 		</section>
 
 		<section class="agent-container">
@@ -770,8 +767,10 @@
 
 		<div class="game-cta">
 			<h2>PLAY THE GAME</h2>
-			<button class="find-agent">Pick Agents</button>
-			<button class="download">Download</button>
+			<button class="find-agent" id="footer-match">Find Your Agent</button>
+			<a href="https://playvalorant.com/en-us/" target="_blank">
+				<button class="download">Download</button></a
+			>
 		</div>
 		<div class="credits">
 			<p>
@@ -789,6 +788,7 @@
 			</p>
 		</div>
 		<script>
+			// THEME TOGGLE
 			let themeChange = () => {
 				document.querySelector(".theme").classList.toggle("light-card");
 				document.querySelector("nav").classList.toggle("light-card");
@@ -810,6 +810,60 @@
 
 			let themeBtn = document.querySelector(".theme");
 			themeBtn.addEventListener("click", themeChange);
+
+			// INFO BUTTON
+			let pageInfo = () => {
+				alert(
+					`This page is an ongoing project and is likely to change as I expand my skillset! Enjoy information about the Valorant agents in the meantime. 🥳`
+				);
+			};
+
+			let infoBtn = document.querySelector(".question");
+			infoBtn.addEventListener("click", pageInfo);
+
+			// AGENT MATCH
+			let agentMatch = () => {
+				let name = prompt("What is your name?");
+				let preference = prompt("Do you enjoy playing on a team?");
+				let role = prompt(
+					"Of the four options, which best describes you: aggressive, strategic, defensive, or supportive?"
+				);
+
+				preference = preference.toLowerCase().trim();
+				role = role.toLowerCase().trim();
+
+				if (preference === "yes" && role === "aggressive") {
+					alert(
+						`${name}, you'd be a great fit as a Duelist. Aggressive players are needed for entry and protecting teammates to allow them to complete the objective. They are especially important during attack-related tactics.`
+					);
+					alert(`Try playing Phoenix, Jett, Reyna, Yoru, or Neon!`);
+				} else if (preference === "yes" && role === "strategic") {
+					alert(
+						`${name}, you'd be a great fit as an Initiator. It's important that the initiator is levelheaded and strategic in order to help your teammates to complete the objective.`
+					);
+					alert(`Try playing Sova, Breach, Skye, KAY/O, or Fade!`);
+				} else if (preference === "yes" && role === "defensive") {
+					alert(
+						`${name}, you'd be a great fit as a Controller. Controllers are imperative as their abilities regulate match dynamics.`
+					);
+					alert(`Try playing Brimstone, Viper, Omen, Astra or Harbor!`);
+				} else if (preference === "yes" && role === "supportive") {
+					alert(
+						`${name}, you'd be a great fit as a Sentinel. Sentinels are known for their supportive abilities that help their team survive and are especially strong for defensive tactics.`
+					);
+					alert(`Try playing Killjoy, Cypher, Sage or Chamber!`);
+				} else {
+					alert(
+						"Valorant is a team-based game that requires each team member to play a specific role to complete the overall match objective. It's important that you enjoy playing as a team and also, individually in your role!"
+					);
+				}
+			};
+
+			let matchHeroBtn = document.querySelector("#hero-match");
+			matchHeroBtn.addEventListener("click", agentMatch);
+
+			let matchFooterBtn = document.querySelector("#footer-match");
+			matchFooterBtn.addEventListener("click", agentMatch);
 		</script>
 	</body>
 </html>
