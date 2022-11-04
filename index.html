@@ -66,7 +66,6 @@
 				font-weight: 200;
 				line-height: 20px;
 				font-size: 15px;
-				text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 			}
 
 			b {
@@ -233,14 +232,14 @@
 
 			/* LIGHT THEME */
 
-			.light-background {
+			.light {
 				color: #292929;
 				background: #faf8f8;
 			}
 
-			.light {
+			.light-card {
 				background: #ece8e1;
-				box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
+				box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.25);
 			}
 
 			.agent-bg:hover .light-hover {
@@ -248,7 +247,7 @@
 				text-shadow: none;
 			}
 
-			.agent-img-shadow {
+			.agent-shadow {
 				filter: drop-shadow(8px 0px 10px rgba(0, 0, 0, 0.25));
 			}
 
@@ -672,7 +671,7 @@
 		</div>
 		<div class="credits">
 			<p>
-				Coded by
+				Designed & Coded by
 				<strong><a href="https://www.aniqa.io" target="_blank">Aniqa</a></strong
 				><br />
 				<small
@@ -687,16 +686,16 @@
 		</div>
 		<script>
 			let themeChange = () => {
-				document.querySelector(".theme").classList.toggle("light");
-				document.querySelector("nav").classList.toggle("light");
-				document.querySelector(".question").classList.toggle("light");
-				document.querySelector("body").classList.toggle("light-background");
+				document.querySelector(".theme").classList.toggle("light-card");
+				document.querySelector("nav").classList.toggle("light-card");
+				document.querySelector(".question").classList.toggle("light-card");
+				document.querySelector("body").classList.toggle("light");
 				document
 					.querySelectorAll(".agent-bg")
-					.forEach((el) => el.classList.toggle("light"));
+					.forEach((el) => el.classList.toggle("light-card"));
 				document
 					.querySelectorAll(".agent-img")
-					.forEach((el) => el.classList.toggle("agent-img-shadow"));
+					.forEach((el) => el.classList.toggle("agent-shadow"));
 				document
 					.querySelectorAll(".agent-desc")
 					.forEach((el) => el.classList.toggle("light-hover"));
