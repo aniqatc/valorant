@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Valorant Agents</title>
+		<title>Valorant Maps & Agents</title>
 		<link
 			rel="icon"
 			type="image/x-icon"
@@ -17,12 +17,18 @@
 			rel="stylesheet"
 		/>
 		<style>
+			/* ELEMENT STYLING */
 			body {
 				font-family: "Nunito", sans-serif;
 				font-weight: 500;
 				background: #292929;
 				color: white;
 				margin: 0 auto;
+			}
+
+			header {
+				display: flex;
+				align-items: center;
 			}
 
 			nav {
@@ -41,10 +47,19 @@
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 			}
 
-			header {
-				display: flex;
-				align-items: center;
+			button {
+				font-family: "Nunito", sans-serif;
+				font-weight: 800;
+				font-size: 15px;
+				cursor: pointer;
 			}
+
+			header,
+			.agent-container {
+				margin: 0 240px;
+			}
+
+			/* TEXT */
 
 			h2 {
 				font-family: "Barlow Semi Condensed", sans-serif;
@@ -53,13 +68,6 @@
 				text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.849);
 				margin: 0 auto;
 				text-align: center;
-			}
-
-			button {
-				font-family: "Nunito", sans-serif;
-				font-weight: 800;
-				font-size: 15px;
-				cursor: pointer;
 			}
 
 			p {
@@ -84,6 +92,20 @@
 				font-weight: 700;
 			}
 
+			/* LOGOS */
+
+			#logo {
+				height: 30px;
+				float: right;
+			}
+
+			#heading {
+				height: 18px;
+				margin: 0px 10px;
+			}
+
+			/* BUTTON STYLING */
+
 			.theme,
 			.question {
 				background: #ece8e1;
@@ -99,111 +121,6 @@
 					rgba(103, 108, 111, 0.215) 100%
 				);
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-			}
-
-			.agent-cta {
-				background-image: url(https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/agents.png);
-			}
-
-			.game-cta {
-				background-image: url(https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/agents-full.png);
-			}
-
-			.game-cta,
-			.agent-cta {
-				background-size: cover;
-				background-attachment: fixed;
-				max-width: 100%;
-				padding: 130px;
-				text-align: center;
-			}
-
-			.agent-img {
-				width: 350px;
-				transform: translateY(-30px);
-				margin: 0 auto;
-				filter: drop-shadow(8px 0px 10px #000000);
-				transition: all 150ms ease-in-out;
-			}
-
-			.map-img {
-				border-radius: 10px;
-				margin: 5px 10px;
-				border: 2px solid #3738397b;
-				width: 180px;
-				transition: all 150ms ease-out;
-			}
-
-			.map-container {
-				display: flex;
-				margin: 0 10px 20px 10px;
-				justify-content: center;
-				flex-wrap: wrap;
-			}
-
-			.map-bg {
-				position: relative;
-			}
-
-			.map-desc {
-				position: absolute;
-				top: 45%;
-				left: 12%;
-				font-family: "Barlow Semi Condensed", sans-serif;
-				font-size: 18px;
-			}
-
-			.map-img:hover {
-				transform: scale(1.2);
-			}
-
-			.agent-container {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-				grid-template-rows: auto;
-			}
-
-			.agent-bg {
-				height: 300px;
-				width: 300px;
-				border-radius: 10px;
-				margin: 30px auto;
-				padding-bottom: 20px;
-				background: linear-gradient(
-					180deg,
-					rgba(103, 108, 111, 0.25) 0%,
-					rgba(103, 108, 111, 0.215) 100%
-				);
-				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-				position: relative;
-			}
-
-			.agent-desc {
-				position: absolute;
-				padding: 0 14px;
-				text-align: center;
-				top: 10%;
-				visibility: hidden;
-				opacity: 0;
-				transition: all 150ms ease-in;
-			}
-
-			.agent-bg:hover .agent-desc {
-				visibility: visible;
-				opacity: 1;
-				background: linear-gradient(
-					180deg,
-					rgba(103, 108, 111, 0.25) 0%,
-					rgba(103, 108, 111, 0.4) 100%
-				);
-				padding: 20px;
-				box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
-			}
-
-			.agent-bg:hover .agent-img {
-				transform: scale(0.9) translateY(-15px);
-				opacity: 0.6;
-				filter: blur(4px);
 			}
 
 			.theme:hover {
@@ -243,24 +160,122 @@
 				transform: scale(1.1);
 			}
 
+			/* CTA SECTIONS */
+
+			.agent-cta {
+				background-image: url(https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/agents.png);
+			}
+
+			.game-cta {
+				background-image: url(https://raw.githubusercontent.com/aniqatc/valorant/main/assets/images/agents-full.png);
+			}
+
+			.game-cta,
+			.agent-cta {
+				background-size: cover;
+				background-attachment: fixed;
+				max-width: 100%;
+				padding: 130px;
+				text-align: center;
+			}
+
+			/* MAP SECTION */
+
+			.map-container {
+				display: flex;
+				margin: 0 10px 20px 10px;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.map-bg {
+				position: relative;
+			}
+
+			.map-img {
+				border-radius: 10px;
+				margin: 5px 10px;
+				border: 2px solid #3738397b;
+				width: 180px;
+				transition: all 150ms ease-out;
+			}
+
+			.map-img:hover {
+				transform: scale(1.2);
+			}
+
+			.map-desc {
+				position: absolute;
+				top: 45%;
+				left: 12%;
+				font-family: "Barlow Semi Condensed", sans-serif;
+				font-size: 18px;
+			}
+
+			/* AGENT SECTION */
+
+			.agent-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+				grid-template-rows: auto;
+			}
+
+			.agent-bg {
+				height: 300px;
+				width: 300px;
+				border-radius: 10px;
+				margin: 30px auto;
+				padding-bottom: 20px;
+				background: linear-gradient(
+					180deg,
+					rgba(103, 108, 111, 0.25) 0%,
+					rgba(103, 108, 111, 0.215) 100%
+				);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+				position: relative;
+			}
+
+			.agent-img {
+				width: 350px;
+				transform: translateY(-30px);
+				margin: 0 auto;
+				filter: drop-shadow(8px 0px 10px #000000);
+				transition: all 150ms ease-in-out;
+			}
+
+			.agent-bg:hover .agent-img {
+				transform: scale(0.9) translateY(-15px);
+				opacity: 0.6;
+				filter: blur(4px);
+			}
+
+			.agent-desc {
+				position: absolute;
+				padding: 0 14px;
+				text-align: center;
+				top: 10%;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 150ms ease-in;
+			}
+
+			.agent-bg:hover .agent-desc {
+				visibility: visible;
+				opacity: 1;
+				background: linear-gradient(
+					180deg,
+					rgba(103, 108, 111, 0.25) 0%,
+					rgba(103, 108, 111, 0.4) 100%
+				);
+				padding: 20px;
+				box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
+			}
+
+			/* CREDIT SECTION */
+
 			.credits {
 				text-align: center;
 				margin: 20px auto;
-			}
-
-			#logo {
-				height: 30px;
-				float: right;
-			}
-
-			#val {
-				height: 18px;
-				margin: 0px 10px;
-			}
-
-			header,
-			.agent-container {
-				margin: 0 240px;
 			}
 
 			/* LIGHT THEME */
@@ -275,6 +290,10 @@
 				box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.25);
 			}
 
+			.light-desc {
+				color: #faf8f8;
+			}
+
 			.agent-bg:hover .light-hover {
 				background: #ece8e180;
 				text-shadow: none;
@@ -284,18 +303,17 @@
 				filter: drop-shadow(8px 0px 10px rgba(0, 0, 0, 0.25));
 			}
 
-			.light-desc {
-				color: #faf8f8;
-			}
+			/* MEDIA QUERY */
 
 			@media only screen and (max-width: 1200px) {
+				header {
+					margin: 0 20px;
+				}
+
 				.agent-container {
 					margin: 0 30px;
 				}
 
-				header {
-					margin: 0 20px;
-				}
 				.agent-bg {
 					width: 200px;
 					height: 200px;
@@ -326,6 +344,11 @@
 					justify-content: center;
 				}
 
+				.theme,
+				.question {
+					margin-bottom: 20px;
+				}
+
 				.map-img {
 					width: 140px;
 					margin: 5px;
@@ -333,10 +356,7 @@
 				.agent-bg:hover .agent-desc {
 					padding: 20px 2px;
 				}
-				.theme,
-				.question {
-					margin-bottom: 20px;
-				}
+
 				.game-cta,
 				.agent-cta {
 					padding: 100px 0;
@@ -349,7 +369,7 @@
 			<nav>
 				<img
 					src="https://fontmeme.com/permalink/221102/a12500deb5c58e594005a1491129b802.png"
-					id="val"
+					id="heading"
 				/>
 
 				<div>
