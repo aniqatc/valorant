@@ -54,7 +54,7 @@ h2 {
 p {
 	font-family: monospace;
 	font-weight: 200;
-	line-height: 20px;
+	line-height: 16px;
 	font-size: 15px;
 }
 
@@ -186,10 +186,18 @@ a:hover {
 
 .map-desc {
 	position: absolute;
-	top: 45%;
+	top: 38%;
 	left: 12%;
 	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 18px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.map-desc small {
+	font-family: "Nunito", sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 600;
 }
 
 /* AGENT SECTION */
