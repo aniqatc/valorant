@@ -1,6 +1,6 @@
 /* ELEMENT STYLING */
 body {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
 	background: #292929;
 	color: white;
@@ -29,7 +29,7 @@ nav {
 }
 
 button {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-weight: 800;
 	font-size: 15px;
 	cursor: pointer;
@@ -43,7 +43,7 @@ header,
 /* TEXT */
 
 h2 {
-	font-family: "Barlow Semi Condensed", sans-serif;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-size: 4em;
 	color: #d9d9d9;
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.849);
@@ -188,13 +188,13 @@ a:hover {
 	position: absolute;
 	top: 38%;
 	left: 12%;
-	font-family: "Barlow Semi Condensed", sans-serif;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-size: 18px;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .map-desc small {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-size: 11px;
 	font-style: italic;
 	font-weight: 600;
@@ -335,6 +335,20 @@ a:hover {
 	.theme,
 	.question {
 		margin-bottom: 20px;
+	}
+
+	.map-img {
+		width: 130px;
+	}
+
+	.map-desc {
+		top: 32%;
+		font-size: 16px;
+		line-height: 14px;
+	}
+
+	.map-desc small {
+		font-size: 10px;
 	}
 
 	.agent-bg:hover .agent-desc {
