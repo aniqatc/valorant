@@ -338,17 +338,12 @@ a:hover {
 	}
 
 	.map-img {
-		width: 130px;
+		width: 145px;
 	}
 
 	.map-desc {
 		top: 32%;
-		font-size: 16px;
 		line-height: 14px;
-	}
-
-	.map-desc small {
-		font-size: 10px;
 	}
 
 	.agent-bg:hover .agent-desc {
