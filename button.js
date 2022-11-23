@@ -2,7 +2,6 @@
 let themeChange = () => {
 	document.querySelector(".theme").classList.toggle("light-card");
 	document.querySelector("nav").classList.toggle("light-card");
-	document.querySelector(".question").classList.toggle("light-card");
 	document.querySelector("body").classList.toggle("light");
 	document
 		.querySelectorAll(".map-desc")
@@ -20,16 +19,6 @@ let themeChange = () => {
 
 let themeBtn = document.querySelector(".theme");
 themeBtn.addEventListener("click", themeChange);
-
-// INFO BUTTON
-let pageInfo = () => {
-	alert(
-		`This page is an ongoing project and is likely to change as I expand my skillset! Enjoy information about the Valorant agents in the meantime. 🥳`
-	);
-};
-
-let infoBtn = document.querySelector(".question");
-infoBtn.addEventListener("click", pageInfo);
 
 // AGENT MATCH
 let agentMatch = () => {
@@ -74,3 +63,6 @@ matchHeroBtn.addEventListener("click", agentMatch);
 
 let matchFooterBtn = document.querySelector("#footer-match");
 matchFooterBtn.addEventListener("click", agentMatch);
+
+// Hover Function to Mobile
+document.addEventListener("touchstart", function () {}, true);

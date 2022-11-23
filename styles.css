@@ -1,6 +1,6 @@
 /* ELEMENT STYLING */
 body {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-weight: 500;
 	background: #292929;
 	color: white;
@@ -29,7 +29,7 @@ nav {
 }
 
 button {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-weight: 800;
 	font-size: 15px;
 	cursor: pointer;
@@ -43,7 +43,7 @@ header,
 /* TEXT */
 
 h2 {
-	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 4em;
 	color: #d9d9d9;
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.849);
@@ -87,8 +87,7 @@ a:hover {
 
 /* BUTTON STYLING */
 
-.theme,
-.question {
+.theme {
 	background: #ece8e1;
 	border-radius: 50%;
 	border: none;
@@ -107,11 +106,6 @@ a:hover {
 .theme:hover {
 	transform: scale(0.9);
 	background: #ff4656d0;
-}
-
-.question:hover {
-	transform: scale(0.9);
-	background: #91ebffd7;
 }
 
 .find-agent,
@@ -188,13 +182,13 @@ a:hover {
 	position: absolute;
 	top: 38%;
 	left: 12%;
-	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-family: "Barlow Semi Condensed", sans-serif;
 	font-size: 18px;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .map-desc small {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 11px;
 	font-style: italic;
 	font-weight: 600;
@@ -327,16 +321,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 480px) {
-	header {
-		flex-wrap: wrap;
-		justify-content: center;
+	.agent-container {
+		margin: 0;
 	}
-
-	.theme,
-	.question {
-		margin-bottom: 20px;
-	}
-
 	.map-img {
 		width: 145px;
 	}
