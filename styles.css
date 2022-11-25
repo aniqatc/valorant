@@ -28,6 +28,10 @@ nav {
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+i {
+	color: #ff4656;
+}
+
 button {
 	font-family: "Nunito", sans-serif;
 	font-weight: 800;
@@ -106,6 +110,10 @@ a:hover {
 .theme:hover {
 	transform: scale(0.9);
 	background: #ff4656d0;
+}
+
+.theme:hover i {
+	color: #91ebffd7;
 }
 
 .find-agent,
