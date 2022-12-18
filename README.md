@@ -1,6 +1,8 @@
 # <a href="https://valorant.aniqa.dev" target="_blank">Valorant</a>
 A simple (my first) landing page about the characters and maps found in the competitive tactical FPS game, Valorant. 
 
+<img src="https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png" width="20px">  <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="20px"> <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="20px">  <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="20px">
+
 # Key Features
 The Valorant landing page is the first landing page project that I ever created and it was mainly to practice toggling between two themes and using grid for the first time. I have not yet made any significant changes since I built it but I plan on updating in the future (possibly with an API that provides Valorant data). For now, the key features and concepts I worked on include:
 - Toggling between light and dark mode using JavaScript
