@@ -1,10 +1,11 @@
 /* ELEMENT STYLING */
 body {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
 	background: #292929;
 	color: white;
 	margin: 0 auto;
+	transition: all 200ms ease-in;
 }
 
 header {
@@ -33,7 +34,7 @@ i {
 }
 
 button {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-weight: 800;
 	font-size: 15px;
 	cursor: pointer;
@@ -47,7 +48,7 @@ header,
 /* TEXT */
 
 h2 {
-	font-family: "Barlow Semi Condensed", sans-serif;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-size: 4em;
 	color: #d9d9d9;
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.849);
@@ -190,13 +191,13 @@ a:hover {
 	position: absolute;
 	top: 38%;
 	left: 12%;
-	font-family: "Barlow Semi Condensed", sans-serif;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-size: 18px;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .map-desc small {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-size: 11px;
 	font-style: italic;
 	font-weight: 600;
@@ -230,7 +231,7 @@ a:hover {
 	transform: translateY(-30px);
 	margin: 0 auto;
 	filter: drop-shadow(8px 0px 10px #000000);
-	transition: all 150ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 
 .agent-bg:hover .agent-img {
