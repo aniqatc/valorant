@@ -224,13 +224,17 @@ a:hover {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 	grid-template-rows: auto;
+	gap: 45px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	align-items: center;
+	justify-items: center;
 }
 
 .agent-bg {
 	height: 300px;
 	width: 300px;
 	border-radius: 10px;
-	margin: 30px auto;
 	padding-bottom: 20px;
 	background: var(--element-bg);
 	box-shadow: var(--element-shadow);
@@ -240,9 +244,12 @@ a:hover {
 .agent-img {
 	width: 350px;
 	transform: translateY(-30px);
-	margin: 0 auto;
 	filter: var(--agent-shadow);
 	transition: all 200ms ease-in-out;
+}
+
+.new-agent-img {
+	transform: translateY(-10px) scale(1.1);
 }
 
 .agent-bg:hover .agent-img {
@@ -252,9 +259,12 @@ a:hover {
 }
 
 .agent-desc {
+	position: absolute;
+	inset: 0;
 	color: var(--body-text);
-	padding: 0 14px;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	visibility: hidden;
 	opacity: 0;
 	transition: all 150ms ease-in;
@@ -283,7 +293,7 @@ a:hover {
 	}
 
 	.agent-container {
-		margin: 0 30px;
+		margin: 30px 30px;
 	}
 
 	.agent-bg {
@@ -296,12 +306,8 @@ a:hover {
 	}
 
 	.agent-desc {
-		position: absolute;
-		padding: 0;
-		text-align: center;
 		font-size: 11px;
 		line-height: 14px;
-		top: 6%;
 	}
 
 	.game-cta,
@@ -311,9 +317,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 480px) {
-	.agent-container {
-		margin: 0;
-	}
 	.map-img {
 		width: 145px;
 	}
