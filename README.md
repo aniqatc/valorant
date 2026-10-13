@@ -1,34 +1,68 @@
-## Valorant Landing Page
+# Valorant Landing Page
 
-[https://valorant.aniqa.dev/](https://valorant.aniqa.dev/)
+A fan landing page for Valorant's agents and maps, with light and dark themes and a quick quiz that matches you to an agent role. My first landing page!
 
-🎮  A simple landing page about the characters and maps found in the competitive tactical FPS game, Valorant. Website has a light and dark mode, uses a responsive grid and text overlays that appear on hover.
+**[Live site](https://valorant.aniqa.dev)**
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://valorant.aniqa.dev"><img src="assets/valorant-light.png" alt="The landing page in light mode, with the hero and a grid of agent cards" width="100%"></a></td>
+    <td width="50%"><a href="https://valorant.aniqa.dev"><img src="assets/og-img.png" alt="The landing page in dark mode" width="100%"></a></td>
+  </tr>
+</table>
 
 ## Tech
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML, CSS and JavaScript
+- Google Fonts (Barlow Semi Condensed and Nunito)
 
-## Key Features
+## Features
 
-**My first landing page!**
+- A grid of 24 agent cards, each with a text overlay that appears on hover (or tap on phones)
+- 10 maps, each labeled with its real-world location (Lotus in the Western Ghats, Sunset in Los Angeles)
+- A light and dark theme toggle
+- "Find Your Match" asks three questions and suggests a role (Duelist, Initiator, Controller or Sentinel) with agents to try
+- A download button linking to the official game site
 
-- Toggling between light and dark mode using JavaScript
-- Using a responsive grid system that works on any screen size
-- Using absolute positioning to overlay text above each character card
-- Text overlays only appear on hover for each card
-- Styling the characters to give them a more 3D appearance
+## Design
 
-## Future Updates
-I actually very much enjoy Valorant so I'm hoping I can come back to this at a later time to add more robust features.
-- Dynamically load character content using an API
-- Implement a popup quiz to find the right agent (and remove the prompts)
-- Add sorting options (to filter based on character type)
-- Share user data (which characters are the most popular, which abilities are the most used, etc...)
+- Agent art styled with shadows to look more 3D, with text overlays positioned on top
+- A responsive grid that fills the width at any screen size, with breakpoints at 1200px and 480px
+- Theme colors live in CSS variables, so the toggle swaps one class instead of restyling each element
 
-# Light Mode
-<a href="https://valorant.aniqa.dev" target="_blank"><img src="https://github.com/aniqatc/valorant/blob/main/assets/valorant-light.png?raw=true" style="max-width:100%;"></a>
+## Project structure
 
-# Dark Mode
-<a href="https://valorant.aniqa.dev" target="_blank"><img src="https://github.com/aniqatc/valorant/blob/main/assets/og-img.png?raw=true" style="max-width:100%;"></a>
+- `index.html`: the page
+- `styles.css`: theme variables, layout and the two breakpoints
+- `button.js`: the theme toggle, the agent quiz and tap-to-hover on phones
+- `assets/images/`: agent, map and logo art
+
+## Key concepts
+
+- **CSS Grid with `auto-fit` and `minmax`**, so the agent cards reflow without a breakpoint for every screen size.
+- **Absolute positioning** to layer text over each agent card.
+- **An empty `touchstart` listener** so phones apply `:hover` styles when you tap a card.
+
+## Setup
+
+No build step or API keys. Open `index.html`, or serve the folder locally:
+
+```bash
+git clone https://github.com/aniqatc/valorant.git
+cd valorant
+python3 -m http.server
+```
+
+## Changelog
+
+### August 2024
+
+- Fixed a hover bug and updated the agents and maps
+
+### November 2023
+
+- Moved theme colors into CSS variables and simplified the toggle
+
+### November 2022
+
+- Initial release
